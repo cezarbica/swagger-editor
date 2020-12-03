@@ -1,0 +1,13 @@
+version: "3"
+
+services: 
+  swagger:
+    image: swagger-editor
+    build:
+      context: .
+      args: 
+        - CONTAINER_USER=$CONTAINER_USER
+    user: "${CONTAINER_USER}"
+    ports:
+      - "8080:8080/tcp"
+    working_dir: /usr/share/nginx
