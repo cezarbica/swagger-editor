@@ -5,6 +5,7 @@ services:
     image: swagger-editor
     build:
       context: .
+      dockerfile: .docker/Dockerfile.run
       args: 
         - CONTAINER_USER=$CONTAINER_USER
     user: "${CONTAINER_USER}"

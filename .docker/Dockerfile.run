@@ -1,7 +1,6 @@
-FROM registry.access.redhat.com/ubi8/ubi:8.1
-ARG CONTAINER_USER=12345
+FROM local/ubi:8.1-nginx
 
-RUN mkdir -p /run/nginx && yum install nginx -y
+ARG CONTAINER_USER=12345
 
 COPY nginx.conf /etc/nginx/
 
